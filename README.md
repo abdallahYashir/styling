@@ -12,6 +12,20 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+Entities
+
+User (devise) -> id, name, password, business
+Business - fields -> id, name, address, description, active
+Job - fields -> id, name, description
+Images - fields -> id, src, business, type
+Image Type - fields -> id, name (profile, background, activities, showcase)
+Services -> name, description, price
+Schedule - fields -> id, type (absent), date (datestring)
+Schedule Type - fields -> id, name
+Working Hours - fields -> id, day, active,  time_start, time_end
+
+1 User -> 1 Business
+
 
 * Database initialization
 
