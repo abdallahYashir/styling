@@ -34,15 +34,23 @@ Days - fields -> id, name
 1 Business ~ Images  
 1 Image -> 1 ImageType
 1 Business ~ Services
+1 Business ~ Schedule
 1 Schedule -> 1 Schedule Type
 1 Working Hour -> 1 Day
 
 
 * Database initialization
-rails g scaffold BusinessType name:string description: text
-rails g scaffold Business name:string address 
+rails g scaffold Address address1:string address2:string zipcode:integer
+rails g scaffold Contact phone_no:integer mobile_no:integer email:string fax:integer
+rails g scaffold BusinessType name:string description:text
+rails g scaffold Business name:string address:references contact:references active:boolean businessType:references
 rails g scaffold ImageType name:string
-rails g scaffold
+rails g scaffold Images src:string business:references imageType:references
+rails g scaffold Services name:string description:text price:float business:references
+rails g scaffold ScheduleType name:string
+rails g scaffold Schedule scheduleType:references date:datetime business:references
+rails g scaffold Days name:string
+rails g scaffold WorkingHours days:references active:boolean time_start:time time_end:time business:references
 
 * How to run the test suite
 
