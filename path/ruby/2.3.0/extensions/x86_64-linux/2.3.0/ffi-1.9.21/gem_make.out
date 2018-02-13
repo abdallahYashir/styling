@@ -1,0 +1,26 @@
+current directory: /home/abdallah/Documents/Projects/rails/booking/path/ruby/2.3.0/gems/ffi-1.9.21/ext/ffi_c
+/usr/bin/ruby2.3 -r ./siteconf20180210-19976-5b8199.rb extconf.rb
+checking for ffi.h... no
+checking for ffi.h in /usr/local/include,/usr/include/ffi... no
+checking for shlwapi.h... no
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+creating extconf.h
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/abdallah/Documents/Projects/rails/booking/path/ruby/2.3.0/extensions/x86_64-linux/2.3.0/ffi-1.9.21/mkmf.log
+
+current directory: /home/abdallah/Documents/Projects/rails/booking/path/ruby/2.3.0/gems/ffi-1.9.21/ext/ffi_c
+make "DESTDIR=" clean
+
+current directory: /home/abdallah/Documents/Projects/rails/booking/path/ruby/2.3.0/gems/ffi-1.9.21/ext/ffi_c
+make "DESTDIR="
+Running autoreconf for libffi
+/home/abdallah/Documents/Projects/rails/booking/path/ruby/2.3.0/gems/ffi-1.9.21/ext/ffi_c/libffi/autogen.sh: 2: exec: autoreconf: not found
+libffi.mk:6: recipe for target '"/home/abdallah/Documents/Projects/rails/booking/path/ruby/2.3.0/gems/ffi-1.9.21/ext/ffi_c/libffi-x86_64-linux-gnu"/.libs/libffi_convenience.a' failed
+make: *** ["/home/abdallah/Documents/Projects/rails/booking/path/ruby/2.3.0/gems/ffi-1.9.21/ext/ffi_c/libffi-x86_64-linux-gnu"/.libs/libffi_convenience.a] Error 127
+
+make failed, exit code 2
