@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180214112719) do
-
-  create_table "business_types", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20180214125706) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
@@ -32,8 +25,8 @@ ActiveRecord::Schema.define(version: 20180214112719) do
     t.integer "fax"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "businessType_id"
-    t.index ["businessType_id"], name: "index_businesses_on_businessType_id"
+    t.integer "type_id"
+    t.index ["type_id"], name: "index_businesses_on_type_id"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -91,6 +84,13 @@ ActiveRecord::Schema.define(version: 20180214112719) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["business_id"], name: "index_services_on_business_id"
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "working_hours", force: :cascade do |t|

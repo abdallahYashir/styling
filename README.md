@@ -16,7 +16,7 @@ Entities
 
 User (devise) -> id, name, password, business
 Business - fields -> id, name, description, active, address1, address2, zipcode, phone_no, mobile_no, email, fax, BusinessType
-BusinessType - fields -> id, name, description (hairstyling, salon, make up artist)
+Type - fields -> id, name, description (hairstyling, salon, make up artist)
 Images - fields -> id, src, business, ImageType
 ImageType - fields -> id, name (profile, background, activities, showcase)
 Services -> id, name, description, price, business
@@ -28,7 +28,7 @@ Days - fields -> id, name
 1 User -> 1 Business
 1 Business -> 1 Address
 1 Business -> 1 Contact
-1 Business ~ BusinessTypes
+1 Business ~ Type
 1 Business ~ Images  
 1 Image -> 1 ImageType
 1 Business ~ Services
@@ -40,7 +40,7 @@ Days - fields -> id, name
 * Database initialization
 rails g scaffold Address address1:string address2:string zipcode:integer
 rails g scaffold Contact phone_no:integer mobile_no:integer email:string fax:integer
-rails g scaffold BusinessType name:string description:text
+rails g scaffold Type name:string description:text
 rails g scaffold Business name:string address:references contact:references active:boolean businessType:references
 rails g scaffold ImageType name:string
 rails g scaffold Images src:string business:references imageType:references
