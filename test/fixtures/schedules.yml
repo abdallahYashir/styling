@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scheduleType: one
+  date: 2018-02-14 13:36:54
+  business: one
+
+two:
+  scheduleType: two
+  date: 2018-02-14 13:36:54
+  business: two

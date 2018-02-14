@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scheduletype:</strong>
+  <%= @schedule.scheduleType %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @schedule.date %>
+</p>
+
+<p>
+  <strong>Business:</strong>
+  <%= @schedule.business %>
+</p>
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

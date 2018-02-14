@@ -1,0 +1,42 @@
+<%= form_with(model: working_hour, local: true) do |form| %>
+  <% if working_hour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(working_hour.errors.count, "error") %> prohibited this working_hour from being saved:</h2>
+
+      <ul>
+      <% working_hour.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :days_id %>
+    <%= form.text_field :days_id, id: :working_hour_days_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active, id: :working_hour_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_start %>
+    <%= form.time_select :time_start, id: :working_hour_time_start %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_end %>
+    <%= form.time_select :time_end, id: :working_hour_time_end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_id %>
+    <%= form.text_field :business_id, id: :working_hour_business_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
