@@ -40,6 +40,7 @@ Days - fields -> id, name
 * Database initialization
 rails g scaffold Address address1:string address2:string zipcode:integer
 rails g scaffold Contact phone_no:integer mobile_no:integer email:string fax:integer
+-- included directly in Business
 rails g scaffold Type name:string description:text
 rails g scaffold Business name:string address:references contact:references active:boolean businessType:references
 rails g scaffold ImageType name:string
