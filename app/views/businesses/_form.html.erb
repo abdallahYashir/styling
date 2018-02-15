@@ -1,0 +1,72 @@
+<%= form_with(model: business, local: true) do |form| %>
+  <% if business.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(business.errors.count, "error") %> prohibited this business from being saved:</h2>
+
+      <ul>
+      <% business.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :business_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :business_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active, id: :business_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address1 %>
+    <%= form.text_area :address1, id: :business_address1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address2 %>
+    <%= form.text_area :address2, id: :business_address2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.number_field :zipcode, id: :business_zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_no %>
+    <%= form.number_field :phone_no, id: :business_phone_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile_no %>
+    <%= form.number_field :mobile_no, id: :business_mobile_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :business_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fax %>
+    <%= form.number_field :fax, id: :business_fax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_id %>
+    <%= form.text_field :type_id, id: :business_type_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

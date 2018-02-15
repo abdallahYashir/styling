@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 # gem 'ffi', '1.9.11'
+#gem 'ffi', '1.9.11'
 # Install gem locally in linux dev machine
 
 gem 'jquery-rails'

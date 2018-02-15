@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180214125706) do
+ActiveRecord::Schema.define(version: 20180214163838) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20180214125706) do
     t.integer "mobile_no"
     t.string "email"
     t.integer "fax"
+    t.integer "type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "type_id"
     t.index ["type_id"], name: "index_businesses_on_type_id"
   end
 
