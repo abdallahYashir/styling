@@ -15,7 +15,7 @@ Things you may want to cover:
 Entities
 
 User (devise) -> id, name, password, business
-Business - fields -> id, name, description, active, address1, address2, zipcode, phone_no, mobile_no, email, fax, BusinessType
+Business - fields -> id, name, description, active, address1, address2, zipcode, phone_no, mobile_no, email, fax, Type
 Type - fields -> id, name, description (hairstyling, salon, make up artist)
 Images - fields -> id, src, business, ImageType
 ImageType - fields -> id, name (profile, background, activities, showcase)
