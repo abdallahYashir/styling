@@ -22,8 +22,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'ffi', '1.9.11'
 #gem 'ffi', '1.9.11'
 # Install gem locally in linux dev machine
-
 gem 'jquery-rails'
+gem 'active_link_to'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
