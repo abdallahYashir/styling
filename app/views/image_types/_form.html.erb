@@ -1,0 +1,22 @@
+<%= form_with(model: image_type, local: true) do |form| %>
+  <% if image_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(image_type.errors.count, "error") %> prohibited this image_type from being saved:</h2>
+
+      <ul>
+      <% image_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :image_type_name, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :Submit, class: "btn btn-block btn-success" %>
+  </div>
+<% end %>

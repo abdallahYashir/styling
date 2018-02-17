@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :image_types
   root 'businesses#index'
   resources :businesses
   resources :types
