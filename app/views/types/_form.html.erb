@@ -1,20 +1,32 @@
 <%= form_with(model: type, local: true) do |form| %>
 
-  <form>
-    <div class="form-group field">
-      <%= form.label :name %>
-      <%= form.text_field :name, id: :type_name, class: "form-control" %>
-    </div>
+<% if type.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(type.errors.count, "error") %> prohibited this type from being saved:</h2>
 
-    <div class="form-group field">
-      <%= form.label :description %>
-      <%= form.text_area :description, id: :type_description , class: "form-control" %>
-    </div>
+  <ul>
+    <% type.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-    <div class="actions">
-      <%= form.submit :Submit, class: "btn btn-block btn-success" %>
-    </div>
+<form>
+  <div class="form-group field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :type_name, class: "form-control" %>
+  </div>
 
-  </form>
+  <div class="form-group field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :type_description , class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :Submit, class: "btn btn-block btn-success" %>
+  </div>
+
+</form>
 
 <% end %>
