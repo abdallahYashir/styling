@@ -22,7 +22,7 @@ ImageType - fields -> id, name (profile, background, activities, showcase)
 Services -> id, name, description, price, business
 Schedule - fields -> id, ScheduleType, date (datestring), business
 ScheduleType - fields -> id, name (absent, early, delay)
-WorkingHours - fields -> id, day, active,  time_start, time_end, business
+WorkingHours (Hours) - fields -> id, day, active,  time_start, time_end, business
 Days - fields -> id, name
 
 1 User -> 1 Business

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :days
   resources :services
   resources :images
   resources :image_types
