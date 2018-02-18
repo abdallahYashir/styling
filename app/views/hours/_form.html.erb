@@ -17,7 +17,7 @@
   </div>
 
   <div class="field form-check">
-    <%= form.check_box :active, id: :hour_active, name: 'active-field', class: 'form-check-input' %>
+    <%= form.check_box :active, { checked: true } , id: :hour_active, name: 'active-field', class: 'form-check-input' %>
     <%= form.label :active, for: 'active-field' %>
   </div>
 

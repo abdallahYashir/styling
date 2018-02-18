@@ -17,7 +17,7 @@
   <tbody>
     <% @hours.each do |hour| %>
       <tr>
-        <td><%= hour.day %></td>
+        <td><%= hour.day.name %></td>
         <td><%= hour.active %></td>
         <td><%= hour.time_start %></td>
         <td><%= hour.time_end %></td>

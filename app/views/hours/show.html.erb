@@ -2,7 +2,7 @@
 
 <p>
   <strong>Day:</strong>
-  <%= @hour.day %>
+  <%= @hour.day.name %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Business:</strong>
-  <%= @hour.business %>
+  <%= @hour.business.name %>
 </p>
 
 <%= link_to 'Edit', edit_hour_path(@hour) %> |
