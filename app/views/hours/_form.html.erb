@@ -1,0 +1,42 @@
+<%= form_with(model: hour, local: true) do |form| %>
+  <% if hour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hour.errors.count, "error") %> prohibited this hour from being saved:</h2>
+
+      <ul>
+      <% hour.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :day_id %>
+    <%= form.select :day_id, options_for_select(Day.all.map{|s|[s.name, s.id]}, {class: 'form-control'}) %>
+  </div>
+
+  <div class="field form-check">
+    <%= form.check_box :active, id: :hour_active, name: 'active-field', class: 'form-check-input' %>
+    <%= form.label :active, for: 'active-field' %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :time_start %>
+    <%= form.time_select :time_start, id: :hour_time_start, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :time_end %>
+    <%= form.time_select :time_end, id: :hour_time_end, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :business_id %>
+    <%= form.select :business_id, options_for_select(Business.all.map{|s|[s.name, s.id]}, {class: 'form-control'}) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :Submit, class: 'btn btn-block btn-success' %>
+  </div>
+<% end %>

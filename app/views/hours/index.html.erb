@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hours</h1>
+
+<table class="table">
+  <thead class="thead-default">
+    <tr>
+      <th>Day</th>
+      <th>Active</th>
+      <th>Time start</th>
+      <th>Time end</th>
+      <th>Business</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hours.each do |hour| %>
+      <tr>
+        <td><%= hour.day %></td>
+        <td><%= hour.active %></td>
+        <td><%= hour.time_start %></td>
+        <td><%= hour.time_end %></td>
+        <td><%= hour.business.name %></td>
+        <td><%= link_to 'Show', hour %></td>
+        <td><%= link_to 'Edit', edit_hour_path(hour) %></td>
+        <td><%= link_to 'Destroy', hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hour', new_hour_path %>
