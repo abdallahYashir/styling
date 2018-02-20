@@ -1,59 +1,68 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @business.name %>
-</p>
+<div class="jumbotron">
+  <h1 class="display-3"> <%= @business.name %> </h1>
+  <h6> <%= @business.description %> </h6>
 
-<p>
-  <strong>Description:</strong>
-  <%= @business.description %>
-</p>
+</div>
 
-<p>
-  <strong>Active:</strong>
-  <%= @business.active %>
-</p>
+<div class="show-wrapper">
+  <p>
+    <strong>Name:</strong>
+    <%= @business.name %>
+  </p>
 
-<p>
-  <strong>Address1:</strong>
-  <%= @business.address1 %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @business.description %>
+  </p>
 
-<p>
-  <strong>Address2:</strong>
-  <%= @business.address2 %>
-</p>
+  <p>
+    <strong>Active:</strong>
+    <%= @business.active %>
+  </p>
 
-<p>
-  <strong>Zipcode:</strong>
-  <%= @business.zipcode %>
-</p>
+  <p>
+    <strong>Address1:</strong>
+    <%= @business.address1 %>
+  </p>
 
-<p>
-  <strong>Phone no:</strong>
-  <%= @business.phone_no %>
-</p>
+  <p>
+    <strong>Address2:</strong>
+    <%= @business.address2 %>
+  </p>
 
-<p>
-  <strong>Mobile no:</strong>
-  <%= @business.mobile_no %>
-</p>
+  <p>
+    <strong>Zipcode:</strong>
+    <%= @business.zipcode %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @business.email %>
-</p>
+  <p>
+    <strong>Phone no:</strong>
+    <%= @business.phone_no %>
+  </p>
 
-<p>
-  <strong>Fax:</strong>
-  <%= @business.fax %>
-</p>
+  <p>
+    <strong>Mobile no:</strong>
+    <%= @business.mobile_no %>
+  </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @business.type.name %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @business.email %>
+  </p>
 
-<%= link_to 'Edit', edit_business_path(@business) %> |
-<%= link_to 'Back', businesses_path %>
+  <p>
+    <strong>Fax:</strong>
+    <%= @business.fax %>
+  </p>
+
+  <p>
+    <strong>Type:</strong>
+    <%= @business.type.name %>
+  </p>
+
+  <%= link_to 'Edit', edit_business_path(@business) %> |
+  <%= link_to 'Back', businesses_path %>
+
+</div>
