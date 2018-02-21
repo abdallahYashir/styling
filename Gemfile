@@ -39,6 +39,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap', '~> 4.0.0'
+gem "paperclip", "~> 5.2.1"
 
 group :development, :test do
 gem 'sqlite3', '1.3.13'

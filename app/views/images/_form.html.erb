@@ -1,4 +1,4 @@
-<%= form_with(model: image, local: true) do |form| %>
+<%= form_with(model: image, local: true, html: { multipart: true }) do |form| %>
   <% if image.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(image.errors.count, "error") %> prohibited this image from being saved:</h2>
@@ -8,6 +8,12 @@
         <li><%= message %></li>
       <% end %>
       </ul>
+    </div>
+  <% end %>
+
+  <% if @image.photo.present? %>
+    <div class="text-center">
+      <%= image_tag(@image.photo.url(), class: 'media-object rounded img-fluid') %>
     </div>
   <% end %>
 
@@ -22,9 +28,13 @@
   </div>
 
   <div class="field form-group">
+    <%= form.label :photo %>
+    <%= form.file_field :photo, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group">
     <%= form.label :business_id %>
     <%= form.select :business_id, options_for_select(Business.all.map{|s|[s.name, s.id]}, {class: 'form-control'}) %>
-
   </div>
 
   <div class="field form-group">

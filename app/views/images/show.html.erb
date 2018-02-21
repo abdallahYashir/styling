@@ -10,6 +10,10 @@
   <%= @image.src %>
 </p>
 
+<div class="image text-center">
+  <%= image_tag @image.photo.url(), class: 'rounded img-fluid' %>
+</div>
+
 <p>
   <strong>Business:</strong>
   <%= @image.business.name %>
