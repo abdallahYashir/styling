@@ -4,7 +4,15 @@ class BusinessesController < ApplicationController
   # GET /businesses
   # GET /businesses.json
   def index
-    @businesses = Business.all
+    # @businesses = Business.all
+    # @businesses = Business.joins("LEFT JOIN images ON businesses.id = images.business_id").includes(:images).group("businesses.id")
+    # @businesses = Business.left_joins(:images).includes(:images)
+    # @businesses = Business.all.references(:images).includes(:images)
+    # @businesses = Business.includes(:images).references(:images).includes(:type).references(:type)
+    @businesses = Business.includes(:images).references(:images)
+    # logger.debug @businesses.first.images.first.inspect
+    image = @businesses.first.images.first
+    logger.debug image.caption.inspect
   end
 
   # GET /businesses/1
