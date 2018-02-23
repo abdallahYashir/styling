@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "businesses";
 
 html {
   position: relative;
@@ -27,3 +28,12 @@ body {
   width: 100px;
   height: 100px;
 }
+
+// @media (min-width:34em) {
+//   .card-deck > .card
+//   {
+//     width: 29%;
+//     flex-wrap: wrap;
+//     flex: initial;
+//   }
+// }
