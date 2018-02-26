@@ -19,7 +19,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-# gem 'ffi', '1.9.11'
+# gem 'ffi', '1.9.11', platforms: :ruby
 #gem 'ffi', '1.9.11'
 # Install gem locally in linux dev machine
 gem 'jquery-rails'
@@ -40,6 +40,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap', '~> 4.0.0'
 gem "paperclip", "~> 5.2.1"
+gem 'devise'
 
 group :development, :test do
 gem 'sqlite3', '1.3.13'
@@ -57,6 +58,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

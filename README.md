@@ -36,6 +36,12 @@ Days - fields -> id, name
 1 Schedule -> 1 Schedule Type
 1 Working Hour -> 1 Day
 
+* User Role and Management
+There are three types of users :
+- Visitor
+- Professionals (Registered User)
+- Super Admin
+
 
 * Database initialization
 rails g scaffold Address address1:string address2:string zipcode:integer
