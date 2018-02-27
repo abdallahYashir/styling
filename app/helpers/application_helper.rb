@@ -1,5 +1,5 @@
 module ApplicationHelper
-  
+
   def bootstrap_class_for flash_type
     debug flash_type
     case flash_type
@@ -15,5 +15,13 @@ module ApplicationHelper
       flash_type.to_s
     end
   end
-  
+
+  def require_admin
+    if current_user.nil?
+      redirect_to root_path
+    elsif !current_user.nil? && !current_user.admin
+      redirect_to root_path
+    end
+  end
+
 end

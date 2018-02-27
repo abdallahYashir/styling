@@ -1,5 +1,6 @@
 class ImageTypesController < ApplicationController
   before_action :set_image_type, only: [:show, :edit, :update, :destroy]
+  before_action :require_admin
 
   # GET /image_types
   # GET /image_types.json
