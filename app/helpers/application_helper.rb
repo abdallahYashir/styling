@@ -24,4 +24,8 @@ module ApplicationHelper
     end
   end
 
+  def register_user_edit
+    !current_user.nil?
+  end
+
 end
