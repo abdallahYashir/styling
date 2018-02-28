@@ -61,8 +61,8 @@ group :development do
   gem 'better_errors'
 end
 
-group :production do
-  gem 'pg', '0.20.0'
+group :production, :staging do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
