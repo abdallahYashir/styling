@@ -43,7 +43,7 @@ gem "paperclip", "~> 5.2.1"
 gem 'devise'
 
 group :development, :test do
-gem 'sqlite3', '1.3.13'
+  gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
