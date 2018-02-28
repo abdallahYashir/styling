@@ -30,6 +30,8 @@
       <% end %>
 
     </div>
-    <%= link_to 'New Business', new_business_path %>
+    <% if register_user_edit %>
+      <%= link_to 'New Business', new_business_path %>
+    <% end %>
 
 </div>
