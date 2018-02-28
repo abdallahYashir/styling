@@ -62,7 +62,8 @@ group :development do
 end
 
 group :production, :staging do
-  gem 'pg'
+  gem 'pg', '~> 0.18'
+  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
