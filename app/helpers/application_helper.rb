@@ -24,6 +24,12 @@ module ApplicationHelper
     end
   end
 
+  def require_registration
+    if current_user.nil?
+      redirect_to root_path
+    end
+  end
+
   def register_user_edit
     !current_user.nil?
   end

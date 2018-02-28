@@ -22,6 +22,7 @@ class BusinessesController < ApplicationController
 
   # GET /businesses/new
   def new
+    require_registration
     @business = Business.new
   end
 
