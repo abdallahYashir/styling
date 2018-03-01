@@ -13,10 +13,5 @@ test:
 
 production:
   adapter: postgresql
-  host: ec2-54-247-95-125.eu-west-1.compute.amazonaws.com
-  database: d84iloparaslc8
-  user: fzdqxyibwrltuz
-  password: 0f10c1e003f8571a92c1a8eb502b5802008f687f4b0f254335e88e2b6b8ae730
-  port: 5432
   pool: 15
   timeout: 5000
